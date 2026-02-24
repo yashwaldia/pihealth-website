@@ -4,12 +4,11 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 const siteConfig = {
-  name: "pi-health",
-  title: "pi-health | AI-Powered Health Tracking App",
+  name: "Pi Health",
+  title: "Pi Health | AI-Powered Health Tracking App",
   description: "Track vitals, medications, lab reports, and wellness with AI insights. Comprehensive health companion for Android with pregnancy care, child health tracking, and personalized wellness programs.",
   url: "https://pihealth.online",
   ogImage: "https://pihealth.online/og-image.jpg",
-  creator: "@pihealth",
   keywords: [
     "health tracking app",
     "vitals monitor",
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
   authors: [
     {
-      name: "pi-health Team",
+      name: "Pi Health",
       url: siteConfig.url,
     }
   ],
@@ -67,7 +66,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  
+
   // Open Graph
   openGraph: {
     type: "website",
@@ -81,7 +80,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: "pi-health - AI-Powered Health Tracking App",
+        alt: "Pi Health - AI-Powered Health Tracking App",
       }
     ],
   },
@@ -91,7 +90,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    creator: siteConfig.creator,
     images: [siteConfig.ogImage],
   },
 
@@ -149,7 +147,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
-  "name": "pi-health",
+  "name": "Pi Health",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "Android",
   "offers": {
@@ -157,13 +155,7 @@ const jsonLd = {
     "price": "0",
     "priceCurrency": "USD"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "1250"
-  },
   "description": siteConfig.description,
-  "screenshot": siteConfig.ogImage,
   "featureList": [
     "Vital Signs Tracking",
     "Medication Management",
@@ -176,7 +168,7 @@ const jsonLd = {
   ],
   "creator": {
     "@type": "Organization",
-    "name": "pi-health",
+    "name": "Pi Health",
     "url": siteConfig.url
   }
 };
@@ -184,14 +176,9 @@ const jsonLd = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "pi-health",
+  "name": "Pi Health",
   "url": siteConfig.url,
   "logo": `${siteConfig.url}/logo.png`,
-  "sameAs": [
-    "https://twitter.com/pihealth",
-    "https://facebook.com/pihealth",
-    "https://instagram.com/pihealth"
-  ],
   "contactPoint": {
     "@type": "ContactPoint",
     "email": "narisnarender@gmail.com",
@@ -204,15 +191,7 @@ const websiteJsonLd = {
   "@type": "WebSite",
   "name": siteConfig.name,
   "url": siteConfig.url,
-  "description": siteConfig.description,
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": `${siteConfig.url}/search?q={search_term_string}`
-    },
-    "query-input": "required name=search_term_string"
-  }
+  "description": siteConfig.description
 };
 
 export default function RootLayout({
@@ -240,7 +219,7 @@ export default function RootLayout({
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
+
         {/* DNS Prefetch */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       </head>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Heart, Mail, Shield, FileText } from 'lucide-react';
+import { Mail, Shield, FileText } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Footer() {
@@ -14,22 +14,18 @@ export default function Footer() {
             <Link href="/" className="flex items-center space-x-2 mb-4 group">
               <Image
                 src="/logo.png"
-                alt="pi-health Logo"
+                alt="Pi Health Logo"
                 width={32}
                 height={32}
                 className="rounded-lg"
               />
               <h3 className="font-bold text-lg sm:text-xl text-primary group-hover:scale-105 transition-transform">
-                pi-health
+                Pi Health
               </h3>
             </Link>
-            <p className="text-text-secondary text-sm sm:text-base leading-relaxed mb-4">
+            <p className="text-text-secondary text-sm sm:text-base leading-relaxed">
               Your comprehensive AI-powered health companion for tracking vitals, medications, and wellness.
             </p>
-            <div className="flex items-center gap-2 text-sm text-text-secondary">
-              <Heart size={16} className="text-primary" />
-              <span>Made with care for your health</span>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -46,8 +42,8 @@ export default function Footer() {
                 { href: '/data-deletion', label: 'Data Deletion' }
               ].map((link) => (
                 <li key={link.href}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-text-secondary hover:text-primary transition-all hover:translate-x-1 inline-block"
                   >
                     {link.label}
@@ -69,8 +65,8 @@ export default function Footer() {
                 { href: '/privacy#data-security', label: 'Data Security' }
               ].map((link) => (
                 <li key={link.href}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-text-secondary hover:text-primary transition-all hover:translate-x-1 inline-block"
                   >
                     {link.label}
@@ -84,14 +80,14 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-text mb-4">Get the App</h4>
             <p className="text-text-secondary text-sm sm:text-base mb-4 leading-relaxed">
-              Download pi-health on Google Play Store
+              Download Pi Health on Google Play Store
             </p>
             <a
               href="https://play.google.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white rounded-xl hover:bg-primary-dark hover:scale-105 transition-all shadow-lg hover:shadow-xl text-sm sm:text-base font-medium"
-              aria-label="Download pi-health from Google Play Store"
+              aria-label="Download Pi Health from Google Play Store"
             >
               Download Now
             </a>
@@ -101,12 +97,12 @@ export default function Footer() {
         <div className="mt-10 sm:mt-12 pt-8 border-t border-border">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-text-secondary">
             <p className="text-center sm:text-left">
-              &copy; {currentYear} pi-health. All rights reserved.
+              &copy; {currentYear} Pi Health. All rights reserved.
             </p>
             <div className="flex items-center gap-2">
               <Mail size={16} className="text-primary" />
-              <a 
-                href="mailto:narisnarender@gmail.com" 
+              <a
+                href="mailto:narisnarender@gmail.com"
                 className="hover:text-primary transition-colors"
               >
                 narisnarender@gmail.com

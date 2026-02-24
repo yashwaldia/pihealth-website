@@ -30,14 +30,14 @@ export default function Header() {
             <motion.div whileHover={{ rotate: 5 }} transition={{ duration: 0.3 }}>
               <Image
                 src="/logo.png"
-                alt="pi-health Logo"
+                alt="Pi Health Logo"
                 width={40}
                 height={40}
                 className="rounded-lg w-8 h-8 sm:w-10 sm:h-10"
               />
             </motion.div>
             <span className="text-xl sm:text-2xl font-bold group-hover:scale-105 transition-transform" style={{ color: 'var(--color-primary)' }}>
-              pi-health
+              Pi Health
             </span>
           </Link>
 

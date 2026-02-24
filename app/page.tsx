@@ -1,13 +1,13 @@
 'use client';
 
-import { 
-  Heart, 
-  Pill, 
-  FileText, 
-  Activity, 
-  Brain, 
-  Baby, 
-  Camera, 
+import {
+  Heart,
+  Pill,
+  FileText,
+  Activity,
+  Brain,
+  Baby,
+  Camera,
   TrendingUp,
   Shield,
   Smartphone,
@@ -70,8 +70,8 @@ export default function Home() {
 
   const faqs = [
     {
-      question: "Is pi-health free to use?",
-      answer: "Yes! pi-health is completely free to download and use. All core features including vitals tracking, medication management, AI analysis, and wellness programs are available at no cost."
+      question: "Is Pi Health free to use?",
+      answer: "Yes! Pi Health is completely free to download and use. All core features including vitals tracking, medication management, AI analysis, and wellness programs are available at no cost."
     },
     {
       question: "How secure is my health data?",
@@ -86,8 +86,8 @@ export default function Home() {
       answer: "Our AI uses Google Gemini to provide health insights, but it's for informational purposes only and not a substitute for professional medical advice. Always consult a healthcare provider for medical decisions."
     },
     {
-      question: "Which platforms does pi-health support?",
-      answer: "Currently, pi-health is available for Android devices via Google Play Store. iOS support is planned for future releases."
+      question: "Which platforms does Pi Health support?",
+      answer: "Currently, Pi Health is available for Android devices via Google Play Store. iOS support is planned for future releases."
     }
   ];
 
@@ -116,7 +116,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center py-12 sm:py-16 md:py-20 lg:py-0">
         {/* Animated Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-white to-primary/5" />
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-20 relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 xl:gap-20 items-center max-w-7xl mx-auto">
             {/* Left Content */}
@@ -154,7 +154,7 @@ export default function Home() {
               </h1>
 
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-7 md:mb-8 leading-relaxed" style={{ color: 'var(--color-text-secondary)' }}>
-                Track vitals, medications, lab reports, and wellness with intelligent AI insights. 
+                Track vitals, medications, lab reports, and wellness with intelligent AI insights.
                 Everything you need in one comprehensive app.
               </p>
 
@@ -167,7 +167,7 @@ export default function Home() {
                   style={{ backgroundColor: 'var(--color-primary)' }}
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  aria-label="Download pi-health from Google Play Store"
+                  aria-label="Download Pi Health from Google Play Store"
                 >
                   <Smartphone className="mr-2 group-hover:rotate-12 transition-transform" size={20} />
                   Download Now
@@ -177,14 +177,14 @@ export default function Home() {
                 <motion.a
                   href="#features"
                   className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold border-2 transition-all hover:shadow-lg text-sm sm:text-base"
-                  style={{ 
-                    borderColor: 'var(--color-primary)', 
+                  style={{
+                    borderColor: 'var(--color-primary)',
                     color: 'var(--color-primary)',
                     backgroundColor: 'white'
                   }}
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  aria-label="Explore features of pi-health"
+                  aria-label="Explore features of Pi Health"
                 >
                   Explore Features
                   <ChevronDown className="ml-2 group-hover:translate-y-1 transition-transform" size={18} />
@@ -214,7 +214,7 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            {/* Right Content - Floating Card with Skeleton Loader */}
+            {/* Right Content - Floating Card */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 50 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -229,7 +229,7 @@ export default function Home() {
                 <div className="absolute top-0 right-0 w-32 sm:w-40 h-32 sm:h-40 rounded-full blur-3xl opacity-20"
                   style={{ backgroundColor: 'var(--color-primary)' }}
                 />
-                
+
                 <div className="relative z-10 text-center">
                   <motion.div
                     animate={{ rotate: [0, 5, -5, 0] }}
@@ -242,7 +242,7 @@ export default function Home() {
                     )}
                     <Image
                       src="/logo.png"
-                      alt="pi-health Logo"
+                      alt="Pi Health Logo"
                       width={120}
                       height={120}
                       className={`mx-auto rounded-2xl transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'} w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32`}
@@ -250,43 +250,16 @@ export default function Home() {
                       onLoad={() => setImageLoaded(true)}
                     />
                   </motion.div>
-                  
+
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">Comprehensive Health Tracking</h3>
                   <p style={{ color: 'var(--color-text-secondary)' }} className="text-sm sm:text-base md:text-lg">
                     AI insights, personalized wellness, and complete medical record management
                   </p>
 
-                  <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-                    <div className="flex -space-x-2 sm:-space-x-3">
-                      {[
-                        { seed: 'Sarah-Johnson', name: 'Sarah' },
-                        { seed: 'John-Smith', name: 'John' },
-                        { seed: 'Emma-Davis', name: 'Emma' },
-                        { seed: 'Alex-Wilson', name: 'Alex' },
-                        { seed: 'Maya-Brown', name: 'Maya' }
-                      ].map((user, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ scale: 0, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          transition={{ delay: 0.5 + i * 0.1, duration: 0.3 }}
-                          className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 sm:border-4 border-white shadow-lg overflow-hidden hover:scale-110 transition-transform cursor-pointer"
-                          whileHover={{ scale: 1.15, zIndex: 10 }}
-                          aria-label={`User avatar for ${user.name}`}
-                        >
-                          <Image
-                            src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${user.seed}&backgroundColor=b6e3f4,c0aede,d1d4f9`}
-                            alt={`${user.name} avatar`}
-                            width={48}
-                            height={48}
-                            className="w-full h-full object-cover"
-                            unoptimized
-                          />
-                        </motion.div>
-                      ))}
-                    </div>
-                    <span className="text-xs sm:text-sm font-medium" style={{ color: 'var(--color-text-secondary)' }}>
-                      Trusted by thousands
+                  <div className="mt-6 sm:mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-full" style={{ backgroundColor: 'rgba(250,138,97,0.1)' }}>
+                    <Smartphone size={16} style={{ color: 'var(--color-primary)' }} />
+                    <span className="text-xs sm:text-sm font-semibold" style={{ color: 'var(--color-primary)' }}>
+                      Available on Android
                     </span>
                   </div>
                 </div>
@@ -352,7 +325,7 @@ export default function Home() {
               className="text-center mb-10 sm:mb-12 md:mb-16"
             >
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 px-4" style={{ color: 'var(--color-text)' }}>
-                How pi-health Works
+                How Pi Health Works
               </h2>
               <p className="text-base sm:text-lg md:text-xl px-4" style={{ color: 'var(--color-text-secondary)' }}>
                 Get started in three simple steps
@@ -364,7 +337,7 @@ export default function Home() {
                 {
                   step: "01",
                   title: "Download & Sign Up",
-                  description: "Get pi-health from Play Store and create your secure account in seconds"
+                  description: "Get Pi Health from Play Store and create your secure account in seconds"
                 },
                 {
                   step: "02",
@@ -396,7 +369,7 @@ export default function Home() {
                       {item.description}
                     </p>
                   </div>
-                  
+
                   {index < 2 && (
                     <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
                       <ArrowRight size={24} className="lg:w-7 lg:h-7" style={{ color: 'var(--color-primary)' }} />
@@ -409,7 +382,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section - Modern Accordion with Better Mobile */}
+      {/* FAQ Section - Modern Accordion */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
           <div className="max-w-4xl mx-auto">
@@ -423,7 +396,7 @@ export default function Home() {
                 Frequently Asked Questions
               </h2>
               <p className="text-base sm:text-lg md:text-xl px-4" style={{ color: 'var(--color-text-secondary)' }}>
-                Everything you need to know about pi-health
+                Everything you need to know about Pi Health
               </p>
             </motion.div>
 
@@ -436,7 +409,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-xl border-2 overflow-hidden transition-all duration-300"
-                  style={{ 
+                  style={{
                     borderColor: openFaq === index ? 'var(--color-primary)' : 'var(--color-border)',
                     boxShadow: openFaq === index ? '0 4px 20px rgba(250, 138, 97, 0.15)' : 'none'
                   }}
@@ -444,7 +417,7 @@ export default function Home() {
                   <button
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
                     className="w-full px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between text-left transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
-                    style={{ 
+                    style={{
                       backgroundColor: openFaq === index ? 'rgba(250, 138, 97, 0.05)' : 'white',
                       '--tw-ring-color': 'var(--color-primary)'
                     } as React.CSSProperties}
@@ -487,7 +460,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Privacy & Security Section - Enhanced Glassmorphism */}
+      {/* Privacy & Security Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-primary/5 via-background to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
           <div className="max-w-5xl mx-auto">
@@ -505,13 +478,13 @@ export default function Home() {
                   <Shield size={48} className="sm:w-14 sm:h-14 md:w-16 md:h-16" style={{ color: 'var(--color-primary)' }} />
                 </motion.div>
               </div>
-              
+
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-5 md:mb-6 px-4" style={{ color: 'var(--color-text)' }}>
                 Your Health Data is Private & Secure
               </h2>
-              
+
               <p className="text-center text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-3xl mx-auto px-4" style={{ color: 'var(--color-text-secondary)' }}>
-                We use Firebase Cloud Firestore with enterprise-grade encryption to protect your sensitive health information. 
+                We use Firebase Cloud Firestore with enterprise-grade encryption to protect your sensitive health information.
                 Your data belongs to you, and only you can access it.
               </p>
 
@@ -532,8 +505,8 @@ export default function Home() {
                 <a
                   href="/privacy"
                   className="inline-flex items-center px-6 sm:px-8 py-3 rounded-xl font-semibold border-2 transition-all hover:scale-105 hover:shadow-lg text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-offset-2"
-                  style={{ 
-                    borderColor: 'var(--color-primary)', 
+                  style={{
+                    borderColor: 'var(--color-primary)',
                     color: 'var(--color-primary)',
                     '--tw-ring-color': 'var(--color-primary)'
                   } as React.CSSProperties}
@@ -548,7 +521,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section - Enhanced */}
+      {/* CTA Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-r from-primary to-primary-dark text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-white rounded-full blur-3xl" />
@@ -565,7 +538,7 @@ export default function Home() {
             >
               Start Your Health Journey Today
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -573,7 +546,7 @@ export default function Home() {
               transition={{ delay: 0.1 }}
               className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 opacity-90 px-4"
             >
-              Join thousands of users tracking their health with pi-health. Download now for free on Android.
+              Take control of your health data. Download Pi Health free on Android.
             </motion.p>
 
             <motion.a
@@ -584,10 +557,10 @@ export default function Home() {
               style={{ color: 'var(--color-primary)' }}
               whileHover={{ scale: 1.05, y: -4 }}
               whileTap={{ scale: 0.98 }}
-              aria-label="Download pi-health - It's Free"
+              aria-label="Download Pi Health - It's Free"
             >
               <Smartphone className="mr-2 sm:mr-3 group-hover:rotate-12 transition-transform" size={24} />
-              Get Started - It&apos;s Free
+              Get Started &mdash; It&apos;s Free
               <ArrowRight className="ml-2 sm:ml-3 group-hover:translate-x-2 transition-transform" size={20} />
             </motion.a>
           </div>
